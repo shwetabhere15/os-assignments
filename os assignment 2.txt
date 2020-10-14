@@ -1,0 +1,185 @@
+q1.write a script to creat 10 directories.
+
+mkdir {a1,a2,a3,a4,a5,a6,a7,a8,a9,a10}
+
+
+
+
+
+
+
+
+
+
+
+q2.write a script to perform string opration?
+
+1)
+        echo "Enter String1: \c"
+        read str1
+        echo "Enter String2: \c"
+        read str2
+
+        if [ $str1 = $str2 ]
+        then
+                echo "String is equal"
+        else
+                echo "String is not equal"
+        fi
+        ;;
+2)
+        echo "Enter String1: \c"
+        read str1
+        echo "Enter String2: \c"
+        read str2
+
+        str3=$str1$str2
+        echo "Join String: \c" $str3
+        ;;
+3)
+        len=0
+        echo "Enter String1: \c"
+        read str1
+            len=$(echo "$str1" | wc -c)
+            len=`expr $len - 1`
+        echo "Length: " $len
+        ;;
+4)
+        echo "Enter String: \c"
+        read str
+
+        echo "Enter Word to find : \c"
+        read word
+
+        echo $str | cat > str1.txt
+
+        grep -o $word str1.txt | cat > str2.txt
+        count=`grep -c $word str2.txt`
+            echo "Count:  \c"$count
+    ;;
+5)
+
+        echo "Enter String1: \c"
+        read str
+
+        len=`expr $str | wc -c`
+        len=`expr $len - 1`
+        while [ $len -gt 0 ]
+        do
+                rev=`expr $str | cut -c $len`
+                ans=$ans$rev
+                len=`expr $len - 1`
+        done
+        echo "Reverse String: \c"$ans
+        
+ 
+
+q3.write a shell script to rename all files in the current directories with numaric continuous value.
+
+
+   ans ==> mv a10 555
+
+
+q4.write a script to print envirnmental variablle like $home ,$path,$shell,$term.
+
+
+   ===>ans  printenv
+
+
+
+q5.write a shell scripy to print all files name and size grater than 5k
+
+
+
+
+====> ans   find . -size +5k -exec ls -l {} \
+
+
+
+
+
+
+
+
+
+
+    ===========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===================================
+
+
+
+Q1. write a script to print fabonacci series.
+
+
+echo "enter a number:"
+#read number
+
+read -p "enter no" n
+f=0
+s=1
+echo $f
+echo $s
+# t=f+s
+t=0
+for((i=0; i<n-2; i++))
+do
+t=$(($f +$s))
+f=$s
+s=$t
+echo $t
+
+
+
+
+
+
+ Q3.write a script to find biggest of three number.
+
+
+echo "Enter Num1"
+read num1
+echo "Enter Num2"
+read num2
+echo "Enter Num3"
+read num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+then
+    echo $num1
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
+then
+    echo $num2
+else
+    echo $num3
+fi
+
+
+
+
+
+ Q4.write a script to print weather number is even or odd
+
+
+echo -n "Enter numnber : "
+read n
+ 
+rem=$(( $n % 2 ))
+ 
+if [ $rem -eq 0 ]
+then
+  echo "$n is even number"
+else
+  echo "$n is odd number"
+fi
+
+
+Q5. write a script  to revers the single string
+ 
+
+ $ echo welcome| rev
+
+
+
+
+Q6.write a script  to revers the input number.
+
+echo 1234 | rev
